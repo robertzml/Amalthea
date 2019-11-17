@@ -20,7 +20,7 @@ def processLoad(load):
         return None
 
 def parse_header(packet):
-    # packet.show()
+    packet.show()
     if packet.haslayer(http.HTTPResponse):
         if 'Raw' in packet:
             load = packet['Raw'].load
